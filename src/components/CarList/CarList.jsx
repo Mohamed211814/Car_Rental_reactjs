@@ -1,29 +1,29 @@
 import React from 'react'
 
-import car1 from '../../assets/car1-removebg-preview.png'
-import car2 from '../../assets/car2-removebg-preview (1).png'
-import car3 from '../../assets/car3-removebg-preview.png'
+import car1 from '../../assets/bmw1.png'
+import car2 from '../../assets/bmw2.png'
+import car3 from '../../assets/bmw3.png'
 
 function CarList() {
-
+ 
     const CarData = [
         {
-            name : "BMW UX",
+            name : "BMW M",
             price : 100,
             image: car1,
-            aosDelay: 0,
+            aosDelay: "0",
         },
         {
-            name : "KIA UX",
+            name : "KIA I",
             price : 140,
             image: car2,
-            aosDelay: 500,
+            aosDelay: "500",
         },
         {
-            name : "BMW UXX",
+            name : "BMW M Series",
             price : 100,
             image: car3,
-            aosDelay: 1000,
+            aosDelay: "1000",
         },
     ]
 
@@ -37,14 +37,17 @@ function CarList() {
 
             <p
             data-aos="fade-up"
-            className='text-sm pb-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos praesentium recusandae architecto alias eveniet numquam fugit non!</p>
+            className='text-sm pb-10 text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos praesentium recusandae architecto alias eveniet numquam fugit non!</p>
 
             <div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
                     {
                         // CAR LISTING CARDS
                         CarData.map((car) => 
-                            (<div className='space-y-3 border-2 border-gray-500 hover:border-primary p-3 rounded-xl'>
+                            (<div
+                                data-aos="fade-up"
+                                data-aos-delay={car.aosDelay}
+                                className='space-y-3 border-2 border-gray-500 hover:border-primary p-3 rounded-xl'>
                                 <div>
                                     <img className='w-full h-[120px object-contain] sm:translate-x-2 group hover:translate-x-10 duration-500' src={car.image} alt="car_logo" />
                                 </div>
@@ -53,12 +56,17 @@ function CarList() {
                                     <h1 className='text-primary font-semibold'>{car.name}</h1>
                                     <div className='flex flex-col sm:flex-row justify-center items-start text-xl font-semibold gap-3'>
                                         <p>${car.price}/Day</p>
-                                        <button className='border-2 border-gray-400 px-5 py-2 rounded-xl hover:border-primary '><a href="#">Details</a></button>
+                                        <a href="#">Details</a>
                                     </div>
                                 </div>
+                                
                             </div>))
                     }
                 </div>
+                <div className='flex justify-center pt-10'>
+                    <button className='border-2 border-gray-500 px-6 py-2 rounded-lg dark:border-primary dark:text-primary text-xl'>Get Started</button>
+                </div>
+                
             </div>
         </div>
     </div>

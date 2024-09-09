@@ -6,6 +6,7 @@ import AOS  from 'aos';
 import About from './components/About/About';
 import Services from './components/services/Services';
 import CarList from './components/CarList/CarList';
+import Testimonials from './components/Testimonials/Testimonials';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
       <About />
       <Services />
       <CarList />
+      <Testimonials />
     </div>
   )
 }
