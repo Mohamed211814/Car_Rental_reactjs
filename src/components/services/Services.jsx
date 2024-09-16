@@ -32,7 +32,7 @@ function Services() {
     ]
 
   return (
-    <div className='py-14 px-44 dark:bg-black dark:text-white duration-300 sm:min-h-[600px] sm:grid sm:place-items-center'>
+    <div className='py-14 px-4 dark:bg-black dark:text-white duration-300 sm:min-h-[600px] sm:grid sm:place-items-center'>
         <div className='container'>
             <div className='pb-12'>
                 <h1 className='text-3xl sm:text-4xl font-semibold font-serif text-center'>Why Choose Us</h1>

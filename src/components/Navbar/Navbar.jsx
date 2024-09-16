@@ -71,7 +71,7 @@ function Navbar({ theme , setTheme }) {
                         <HiMenuAlt1
                             onClick={togglemenu}
                             size={30}
-                            className='cursor-pointer transition-all'
+                            className='md:hidden cursor-pointer transition-all'
                         />
                     ) : (
                         <HiMenuAlt3

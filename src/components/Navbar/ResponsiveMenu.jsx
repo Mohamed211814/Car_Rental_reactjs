@@ -32,7 +32,7 @@ function ResponsiveMenu({ showMenu }) {
     <div className={`${showMenu ? "left-0" : "-left-full"} fixed top-0 z-50 bg-white dark:bg-gray-900 h-screen w-[75%] md:hidden rounded-r-xl shadow-md duration-500 flex flex-col justify-between`}>
         <div className='card'>
             <div className="flex items-center justify-center gap-3">
-                <div className='flex items-center pt-5 mr-24 gap-2'>
+                <div className='flex items-center pt-5 mr-28 gap-2'>
                     <FaRegCircleUser size={35}/>
                     <div>
                         <h1>Hello user</h1>
@@ -42,7 +42,7 @@ function ResponsiveMenu({ showMenu }) {
             </div>
             {/* LINKS */}
             <nav>
-                <ul className='space-y-4 pl-6 pt-6'>
+                <ul className='space-y-4 pl-8 pt-6'>
                     {
                         NavLinks.map((link) => (
                             <li key={link.id}>
