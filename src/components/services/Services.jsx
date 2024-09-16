@@ -40,8 +40,8 @@ function Services() {
 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
                 {
-                    skillsData.map((skill) => (
-                        <div>
+                    skillsData.map((skill , index) => (
+                        <div key={index}>
                             <div
                             key={skill.name}
                             data-aos="fade-up"

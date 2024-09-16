@@ -45,6 +45,7 @@ function CarList() {
                         // CAR LISTING CARDS
                         CarData.map((car) => 
                             (<div
+                                key={car.name}
                                 data-aos="fade-up"
                                 data-aos-delay={car.aosDelay}
                                 className='space-y-3 border-2 border-gray-500 hover:border-primary p-3 rounded-xl'>

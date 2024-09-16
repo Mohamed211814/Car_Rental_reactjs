@@ -7,6 +7,8 @@ import About from './components/About/About';
 import Services from './components/services/Services';
 import CarList from './components/CarList/CarList';
 import Testimonials from './components/Testimonials/Testimonials';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -50,6 +52,8 @@ function App() {
       <Services />
       <CarList />
       <Testimonials />
+      <Contact />
+      <Footer />
     </div>
   )
 }
