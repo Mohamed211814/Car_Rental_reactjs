@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import ResponsiveMenu from './ResponsiveMenu';
 
 import { MdSunny } from "react-icons/md";
 import { IoMdMoon } from "react-icons/io";
+import { HiMenuAlt1 } from "react-icons/hi";
+import { HiMenuAlt3 } from "react-icons/hi";
+
 
 
 function Navbar({ theme , setTheme }) {
@@ -29,13 +34,19 @@ function Navbar({ theme , setTheme }) {
         },
     ]
 
+    const [showMenu , setShowMenu] = useState(false)
+
+    const togglemenu = () => {
+        setShowMenu(!showMenu)
+    }
+
   return (
     <nav className='shadow-lg dark:bg-black dark:text-white duration-300'>
         <div className='container py-4'>
             <div className="flex justify-between items-center">
                 <h1 className='text-3xl font-semibold'>Car Rental</h1>
 
-                <ul className='flex items-center gap-6'>
+                <ul className='hidden sm:flex items-center gap-6'>
                     {
                         NavLinks.map((item) => (
                         <li key={item.id}>
@@ -55,9 +66,24 @@ function Navbar({ theme , setTheme }) {
                     )
                     }
                 </div>
+                {
+                    showMenu ? (
+                        <HiMenuAlt1
+                            onClick={togglemenu}
+                            size={30}
+                            className='cursor-pointer transition-all'
+                        />
+                    ) : (
+                        <HiMenuAlt3
+                            onClick={togglemenu}
+                            size={30}
+                            className='cursor-pointer transition-all'
+                        />
+                    )
+                }
             </div>     
-
         </div>
+        <ResponsiveMenu showMenu={showMenu} />
     </nav>
   )
 }
